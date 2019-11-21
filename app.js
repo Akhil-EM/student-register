@@ -45,10 +45,10 @@ app.use(express.static(path.join(__dirname,"/public")));
 app.set("views","./src/views");
 app.set("view engine","ejs");
 
-// app.listen(process.env.PORT||4000,()=>{
-//     console.log(chalk.blueBright("port  is now active"));
-// });
-
-app.listen(4000,()=>{
+app.listen(process.env.PORT||4000,()=>{
     console.log(chalk.blueBright("port  is now active"));
 });
+
+// app.listen(4000,()=>{
+//     console.log(chalk.blueBright("port  is now active"));
+// });
