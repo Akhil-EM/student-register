@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Add Student</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="/css/search.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" 
+  integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+</head>
+<body>
+    <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+        <a class="navbar-brand" href="#">Student-register</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+          <ul class="navbar-nav">
+                <% for(var i=0;i<nav.length;i++){%>
+                        <li class="nav-item">
+                            <a href="<%=nav[i].link%>" class="nav-link">
+                                <%=nav[i].tittle%>
+                            </a>
+                        </li>
+                <%}%>    
+          </ul>
+        </div> 
+      </nav>
+      <br>
+     <div class="container">         
+        <div class="card">
+            <div class="card-header"><center><h3>search student</h3></center></div>
+            <div class="card-body">
+                    <form action="/action_page.php">
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="name" placeholder="Student name" name="name" id="name" >
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="admno" requried placeholder="admission no" name="admno" >
+                        </div>
+                        <div class="form-group">
+                        <input type="text" class="form-control" id="college" requried placeholder="college" name="college" >
+                        </div>
+                        <button type="submit" class="btn-custom" name="login" id="login">Search</button>
+                    </form>
+            </div> 
+    </div>
+    <div class="card" style="margin:2%;">
+        <div class="card-header"><center><h3>search results</h3></center> 
+        </div> 
+        <div class="cardheight">
+            <% for(var i=0;i<10;i++){%>
+            <div class="card" style="margin:2%;">
+                <div class="card-header"> <center><h3>Student name:
+                    <button type="button" class="btn btn-dark" style="margin-left:8%;">Delete</button>
+                    <button type="button" class="btn btn-dark">Edit</button>
+                </h3></center>
+                  
+                </div>
+                
+                    <div class="card"></div>
+                    <div class="card-body">
+                        <form action="/action_page.php">
+                            <div class="form-group">
+                                <center><h5>Admission no:</h5></center>
+                            </div>
+                            <div class="form-group">
+                                <center><h5>College:</h5></center>
+                            </div>
+                        </form>
+                </div> 
+                  
+             </div>
+             <%}%>
+        </div>
+    </div>
+    
+      
+    </div>
+</body>
+</html>

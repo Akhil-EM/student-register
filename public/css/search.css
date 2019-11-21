@@ -1,0 +1,45 @@
+.card-custom{
+    position:relative;
+    flex-direction:column;
+    height:auto;
+    word-wrap:break-word;
+    background-color:#fff;
+    background-clip:border-box;
+    border:1px solid rgba(0,0,0,.125);
+    border-radius:.25rem;
+}
+.btn-custom
+{
+  background-color: rgb(86, 88, 86); /* Green */
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display:flex;
+  cursor: help;
+  font-weight:bold;
+  padding:1%;
+  padding-left:4%;
+  padding-right:4%;
+  border-radius:5px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.btn-custom:hover
+{
+  background-color: rgb(0, 0, 0); 
+}
+.cardheight
+{
+    position:relative;
+    flex-direction:column;
+    height:40vh;
+    margin-top:2%;
+    word-wrap:break-word;
+    background-color:#fff;
+    background-clip:border-box;
+    border:1px solid rgba(0,0,0,.125);
+    border-radius:.25rem;
+    overflow-y: scroll;
+ 
+}
