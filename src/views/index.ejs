@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Add Student</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="/css/index.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+        <a class="navbar-brand" href="#">Student-register</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+          <ul class="navbar-nav">
+                <% for(var i=0;i<nav.length;i++){%>
+                        <li class="nav-item">
+                            <a href="<%=nav[i].link%>" class="nav-link">
+                                <%=nav[i].tittle%>
+                            </a>
+                        </li>
+                <%}%>    
+          </ul>
+        </div> 
+      </nav>
+      <br>
+     <div class="container">
+            <div class="card">
+                    <div class="card-header"><center><h3>Add a new student</h3></center></div>
+                    <div class="card-body">
+                            <form action="/action_page.php">
+                                <div class="form-group">
+                                    <label for="name" class="formlab">Student Name:</label>
+                                    <input type="text" class="form-control" id="name" placeholder="name" name="name" id="name" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="admno" class="formlab">Admission-no:</label>
+                                    <input type="text" class="form-control" id="admno" requried placeholder="admission no" name="admno" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="college" class="formlab">College:</label>
+                                    <input type="text" class="form-control" id="college" requried placeholder="college" name="college" required>
+                                </div>
+                                <br>
+                                <button type="submit" class="btn-custom" name="login" id="login">Login</button>
+                            </form>
+                    </div> 
+            </div>
+    </div>
+</body>
+</html>
